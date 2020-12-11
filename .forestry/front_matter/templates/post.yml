@@ -1,0 +1,36 @@
+---
+label: post
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  default: post
+  hidden: true
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: author
+  label: author
+- type: file
+  name: header-img
+  label: header-img
+- type: boolean
+  name: catalog
+  label: catalog
+  default: true
+- type: list
+  name: tags
+  label: tags
+- name: header-mask
+  type: text
+  label: header-mask
+  default: '0.4'
+  hidden: true
+pages:
+- _posts/2020-12-03-pindah-ke-jekyll.md
+- _posts/2020-12-04-cara-setting-front-matter.md
