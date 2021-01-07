@@ -1,6 +1,6 @@
 # Tentang Kami
 
-![WildanFauzy Blog](https://wildanfauzy.com/ss.PNG "blog asik")
+[WildanFauzy Blog](https://i0.wp.com/wildanfauzy.com/ss.PNG "blog asik")
 
 [WildanFauzy.com](https://wildanfauzy.com "Blog asik asoy ") adalah media santai dan asik nomor satu di indonesia, membahas hal yang tidak terlalu penting menjadi penting hahahah yang mewadahi tulisan yang mempunyai semangat dan kreativitas, dan hanya untuk sekedar hiburan melewati hiruk pikuk dunia.
 
