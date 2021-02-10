@@ -1,0 +1,13 @@
+name = "m"
+type = "javascript"
+account_id = "dfe78c1798e248b4c939a33313d0d70c"
+workers_dev = true
+
+[env.production]
+workers_dev = false
+route = "wildanfauzy.com/*"
+zone_id = "054191402663c38d251992125ff277cf"
+
+[site]
+bucket = "./_site"
+entry-point = "workers-site"

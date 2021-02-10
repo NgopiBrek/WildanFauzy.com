@@ -1,0 +1,35 @@
+name: Deploy to workers-site
+
+on:
+  push:
+    branches: [ www ]
+  pull_request:
+    branches: [ www ]
+    
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build"
+
+    - name: Install Wrangler
+      run: sudo npm i @cloudflare/wrangler -g
+
+    - name: Publish
+      uses: cloudflare/wrangler-action@1.2.0
+      env:
+        USER: root
+      with:
+        apiToken: ${{ secrets.CF_API_TOKEN }}
+        environment: 'production'
